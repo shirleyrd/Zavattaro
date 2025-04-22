@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-title:  "Lora", serif;
+    --ff-text:"Montserrat", sans-serif;
+    --ff-nav-text: "Raleway", sans-serif;
+    --clr-black: #1c1c1c;
+    --clr-red: #065553;
+    --clr-white:#FAFEF5;
+    --bg-white: url("../img/fondoblanco.jpg");
+    --bg-black: url("../img/bg-black.jpg");
+    --bg-texture: url("../img/green-gobbler.png");
+
+
+}
+
+body {
+    background: var(--bg-texture);
+    background-repeat: no-repeat;
+    background-size: cover;    
+    font-family: var(--ff-text);
+    
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+
+h1, h2, h3 {
+    font-family: var(--ff-title);
+}
+
+
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-inline: 2rem;
+
+}
+
+.main-header {
+    background-color: #FAFEF5;
+  }
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    padding-bottom: 0;
+  }
+
+.banner {
+    height: 800px;
+    padding-bottom:20px;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit:cover;
+    transition: filter 0.4s ease;
+    z-index: 1;
+  }
+
+  .logo-hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    max-width: 800px; /* Ajustalo como quieras */
+  }
+
+  /* Hover effect */
+.banner:hover .banner-img {
+    filter: blur(5px);
+  }
+  
+  .banner:hover .logo-hover {
+    opacity: 5;
+  }
+
+.logo {
+    max-width: 10rem;
+    
+}
+
+.logo img {
+    transform: scale(.5);
+}
+.nav-list {
+    display: flex;
+    gap: 4rem;
+}
+
+
+.nav-link {
+  
+    font-weight: 600;
+    font-size: 1.5rem;
+    font-family: var(--ff-nav-text);
+    color:#065553
+}
+.nav-link:hover {
+  color:#17b0ab
+}
+
+
+/** QUIEN SOY**/
+
+
+.quienes-somos {
+  background-color: #015B53;
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+  height: 800px;
+  padding-bottom: 50rem;
+}
+
+.quienes-texto {
+  max-width: 1200px;
+  margin: 0 auto;
+  
+}
+
+.quienes-texto .col p {
+  font-size: 1.6rem;
+}
+
+.quienes-texto h2 {
+  font-size: 5rem;
+  padding-bottom: 30px;
+  margin-bottom: 3rem;
+}
+
+.grid-3columnas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icono {
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  margin-bottom: 1rem;
+  color: #FAFEF5;
+}
+
+.col p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  max-width: 300px;
+}
+ 
+.section {
+    padding-block: 10rem;
+}
+
+
+.section-servicios {
+    background-image: var(--bg-texture);    
+    color: var(--clr-black);
+    
+    
+
+}
+
+.section-servicios h2 {
+    color:#005b5b;
+    font-size: 5rem;
+   
+    
+}
+
+.section-servicios {
+  background-color: #FAFEF5;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.titulo-servicios {
+  font-size: 3rem;
+  font-family: var(--ff-title);
+  margin-bottom: 3rem;
+  color: var(--clr-black);
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.servicio-item {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.servicio-item:hover {
+  transform: translateY(-5px);
+}
+
+.servicio-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--clr-red);
+}
+
+.servicio-item p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.section-contacto {
+    background-color: #005b5b;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .formulario-contacto {
+    color: white;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .formulario-contacto h2 {
+    font-size: 4.5rem;
+    margin-bottom:40px;
+    letter-spacing: 1px;
+  }
+  
+  .formulario-contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  .formulario-contacto textarea {
+    resize: none;
+    padding-bottom: 5rem;
+  }
+  
+  .formulario-contacto button {
+    background-color: #1ec7c2;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #118984;
+    transition: all 0.2s ease;
+  }
+  
+  .formulario-contacto button:hover {
+    background-color: #17b0ab;
+  }
+  
+  .formulario-contacto button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #118984;
+  }
+.section-inner {
+    display:flex;
+    flex-direction: column;
+    align-items: start;  
+
+    gap: 1.5rem;
+    font-size: 1.3rem;
+
+}
+.section-title {
+ font-size: 3rem;
+}
+
+
+
+.btn {
+    padding: .5rem 1rem;
+    font-weight: 500;
+    display: flex;
+    gap: .5rem;
+    position: relative;
+   
+}
+
+.btn::after{
+    content:'';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: var(--clr-black);
+    transition: .2s;
+ 
+
+}
+
+.btn:hover {
+    color: gray;
+}
+
+.btn:hover::after {
+    height: 100%;
+}
+.social {
+    display: flex;
+    gap: 1rem;
+
+}
+
+.social i {
+    font-size: 2rem;
+}
+
+/**MOBILE MENU**/
+
+button {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    
+
+}
+
+.footer {
+  background-color: var(--clr-white);
+  padding: 4rem 2rem;
+  color: var(--clr-red);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col h4 {
+  font-family: var(--ff-title);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.footer-col p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.footer iframe {
+  border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 750px) {
+    .quien-soy-inner {
+        grid-template-areas:
+        "foto titulo"
+        "texto texto";
+    }
+
+
+
+    .quien-soy-foto {
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 690px) {
+
+    .section {
+        padding-block: 2rem;
+    }
+    .quien-soy-inner {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .quien-soy-foto  {
+        max-width: 50%;
+        align-self: center;
+        padding: 40px;
+        
+
+    }
+
+    .quien-soy-title {
+        text-align: center;
+    }
+    
+}
