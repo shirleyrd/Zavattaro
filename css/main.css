@@ -13,6 +13,7 @@
     --clr-black: #1c1c1c;
     --clr-red: #065553;
     --clr-white:#FAFEF5;
+    --clr-lightgreen:#88e4dc;
     --bg-white: url("../img/fondoblanco.jpg");
     --bg-black: url("../img/bg-black.jpg");
     --bg-texture: url("../img/green-gobbler.png");
@@ -86,7 +87,8 @@ h1, h2, h3 {
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: opacity 0.25s ease;
-    max-width: 800px; /* Ajustalo como quieras */
+    max-width: 800px;
+    padding-top: 100px; /* Ajustalo como quieras */
   }
 
   /* Hover effect */
@@ -120,11 +122,11 @@ h1, h2, h3 {
     color:#065553
 }
 .nav-link:hover {
-  color:#17b0ab
+  color:#17b0ab;
 }
 
 
-/** QUIEN SOY**/
+/** QUIENES SOMOS**/
 
 
 .quienes-somos {
@@ -132,7 +134,7 @@ h1, h2, h3 {
   color: white;
   padding: 5rem 2rem;
   text-align: center;
-  height: 800px;
+  height: 1000px;
   padding-bottom: 50rem;
 }
 
@@ -143,16 +145,51 @@ h1, h2, h3 {
 }
 
 .quienes-texto .col p {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .quienes-texto h2 {
   font-size: 5rem;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   margin-bottom: 3rem;
+  position: relative;
+}
+.quienes-texto h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 800px;
+  height: 4px;
+  background-color: #FAFEF5;
+  border-radius: 2px;
 }
 
+.icon {
+  width: 120px;
+  padding-bottom: 30px;
+}
+
+.btn-consulta {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--clr-lightgreen);
+  color: var(--clr-red);
+  font-size: 1.8rem;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 3rem;
+  margin-top: 3.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-consulta:hover {
+  background-color: #003d3d;
+  color: var(--clr-white); /* Cambiar el color en hover */
+}
 .grid-3columnas {
+  padding-top: 50px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
@@ -182,17 +219,16 @@ h1, h2, h3 {
 }
 
 
-.section-servicios {
-    background-image: var(--bg-texture);    
+.section-servicios {        
     color: var(--clr-black);
-    
-    
-
+  
 }
 
 .section-servicios h2 {
     color:#005b5b;
-    font-size: 5rem;
+    font-size: 5.5rem;
+    padding-bottom: 20px;
+    border-bottom: 4px solid #005b5b;
    
     
 }
@@ -204,7 +240,7 @@ h1, h2, h3 {
 }
 
 .titulo-servicios {
-  font-size: 3rem;
+  
   font-family: var(--ff-title);
   margin-bottom: 3rem;
   color: var(--clr-black);
@@ -219,12 +255,13 @@ h1, h2, h3 {
 }
 
 .servicio-item {
-  background-color: white;
+  background-color: var(--clr-red);
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: left;
   transition: transform 0.3s ease;
+  
 }
 
 .servicio-item:hover {
@@ -232,21 +269,44 @@ h1, h2, h3 {
 }
 
 .servicio-item h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-bottom: 1rem;
-  color: var(--clr-red);
+  color: var(--clr-lightgreen);
 }
 
 .servicio-item p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   line-height: 1.6;
+  color: var(--clr-white);
+  letter-spacing: 1px;
 }
 
 .section-contacto {
-    background-color: #005b5b;
-    padding: 40px 20px;
-    display: flex;
-    justify-content: center;
+  background-color: #005b5b;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* importante para centrar horizontalmente */
+  height: 700px;
+}
+
+  .section-contacto h2 {
+    color: white;
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 4.5rem;
+    
+  }
+  
+  .section-contacto h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    max-width: 1000px; /* o lo que te guste */
+    height: 2px;
+    background: white;
+    margin: 10px auto 0;
   }
   
   .formulario-contacto {
@@ -254,10 +314,10 @@ h1, h2, h3 {
     width: 100%;
     max-width: 400px;
     text-align: center;
+    padding-top: 50px;
   }
   
-  .formulario-contacto h2 {
-    font-size: 4.5rem;
+  .formulario-contacto h2 {    
     margin-bottom:40px;
     letter-spacing: 1px;
   }
@@ -358,7 +418,7 @@ h1, h2, h3 {
     font-size: 2rem;
 }
 
-/**MOBILE MENU**/
+
 
 button {
     background: transparent;
@@ -370,67 +430,158 @@ button {
 
 .footer {
   background-color: var(--clr-white);
-  padding: 4rem 2rem;
+  padding: 4rem 1rem;
   color: var(--clr-red);
 }
 
 .footer-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 3rem;
+  gap: 4.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .footer-col h4 {
   font-family: var(--ff-title);
-  font-size: 1.4rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
+  padding-bottom: 20px;
+  text-align: center;
+  border-bottom: 2px solid #17b0ab;
 }
 
-.footer-col p {
-  font-size: 1rem;
+.footer-col p  {
+  font-size: 1.3rem;
   line-height: 1.6;
+  color: var(--clr-black);
+  
+}
+
+.horario {
+  text-align: center;
+  color:var(--clr-black);
+}
+.horario p {
+  color:#17b0ab;
 }
 
 .footer iframe {
   border-radius: 0.5rem;
+  padding-top: 20px;
 }
 
-@media screen and (max-width: 750px) {
-    .quien-soy-inner {
-        grid-template-areas:
-        "foto titulo"
-        "texto texto";
-    }
-
-
-
-    .quien-soy-foto {
-        padding-bottom: 20px;
-    }
+.footer-col i {
+  font-size: 25px; /* Tamaño del ícono */
+  width: 25px;      /* Ancho fijo para alinear */
+  text-align: center;
+  color: var( --clr-red);      /* Color del ícono, podés cambiarlo */
+  margin-right: 8px;
+  margin-bottom: 20px;
+  
 }
 
-@media screen and (max-width: 690px) {
+.footer-col a[href*="wa.me"]:hover {
+  color: #25D366; /* Verde oficial de WhatsApp */
+  font-weight: bold;
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #25D366;
+  border-radius: 10px;
+  padding: 10px;
+  
+}
 
-    .section {
-        padding-block: 2rem;
-    }
-    .quien-soy-inner {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .quien-soy-foto  {
-        max-width: 50%;
-        align-self: center;
-        padding: 40px;
-        
+.wh-text {
+  font-size: 20px;
 
-    }
+}
 
-    .quien-soy-title {
-        text-align: center;
-    }
-    
+footer.footer::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: #ccc;
+  margin-top: 20px;
+}
+
+/* === MEDIA QUERIES RESPONSIVE === */
+
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
+  .top-bar { 
+    padding: 2rem 1rem; 
+    flex-direction: column; 
+  }
+
+  .banner { 
+    height: 60vh; 
+  }
+  .quienes-somos {
+    height: auto;           /* Anula el height fijo */
+    padding-bottom: 3rem;   /* Un padding razonable en mobile */
+  }
+
+  .quienes-texto h2, 
+  .section-servicios h2, 
+  .section-contacto h2 { 
+    font-size: 4rem; 
+  }
+
+  .grid-3columnas { 
+    grid-template-columns: 1fr; 
+    gap: 2rem; /* Puedes ajustar el espacio entre las columnas */
+  }
+
+  /* Si el problema persiste con la sección "quienes somos" que no está centrada, prueba esto */
+  .quienes-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Para los elementos de .grid-3columnas que quedan en una sola columna */
+  .col {
+    align-items: center;
+  }
+  .footer-container { grid-template-columns: 1fr; }
+  
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .nav-list { flex-direction: column; gap: 1rem; }
+  .banner { height: 50vh; }
+  .quienes-texto h2::after { width: 60%; }
+  .grid-3columnas,
+  .servicios-grid { grid-template-columns: 1fr; }
+  .col p,
+  .servicio-item p { font-size: 1rem; }
+  .btn-consulta,
+  .formulario-contacto button { font-size: 1.2rem; padding: .8rem 1.5rem; }
+  .section-contacto { padding: 3rem 1rem; }
+  .footer-container {grid-template-columns: 1fr; /* Cambia de 2 columnas a 1 */
+}
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .top-bar { padding: 1rem; }
+  .banner { height: 40vh; }
+  .quienes-somos { padding: 3rem 1rem; }
+  .quienes-texto h2 { font-size: 3rem; }
+  .icon { width: 80px; }
+  .col p,
+  .servicio-item p { font-size: .9rem; }
+  .section-contacto h2 { font-size: 2.5rem; }
+  .formulario-contacto { max-width: 90%; }
+  .nav-link { font-size: 1rem; }
+  .footer-container { grid-template-columns: 1fr; }
 }

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-<body>
+<body id="top">
     <header class="main-header">
         <div class="top-bar">  
             <img class ="logo" src="./img/Zavattaronewlogo.png" alt="logo-zavattaro">
@@ -35,33 +35,34 @@
       
           <div class="grid-3columnas">
             <div class="col">
-              <i class="fas fa-gavel icono"></i>
+              <img class="icon" src="./img/boss-manager-judge-svgrepo-com(1).svg" alt="abogado">
               <p>
-                Somos un <strong>estudio jurídico boutique</strong>, dedicado exclusivamente al <strong>derecho previsional</strong>. Atención <strong>personalizada, cálida y eficiente</strong>.
+                Somos un <strong>estudio jurídico boutique</strong>, dedicado exclusivamente al <strong>derecho previsional</strong>. Atención personalizada, cálida y eficiente.
               </p>
             </div>
       
             <div class="col">
-              <i class="fas fa-user-check icono"></i>
+              <img class= "icon" src="./img/list-check-svgrepo-com.svg" alt="listado">
               <p>
                 Acompañamos tu <strong>jubilación, pensión o reajuste</strong> con soluciones claras. Seguimiento cercano y <strong>excelencia profesional</strong>.
               </p>
             </div>
       
             <div class="col">
-              <i class="fas fa-eye icono"></i>
+              <img class="icon" src="./img/handshake-deal-svgrepo-com(1).svg" alt="manos">
               <p>
-                Enfoque exclusivo en derecho previsional, con una <strong>visión profunda y especializada</strong>. Compromiso y sensibilidad.
+                Enfoque exclusivo en derecho previsional, con una visión profunda y especializada, <strong>con más de diez años de experiencia</strong>. Compromiso y sensibilidad durante todo el proceso.
               </p>
             </div>
           </div>
+          <a href="#contacto" class="btn-consulta">Envíanos tu consulta</a>
         </div>
       </section>
       
 
       <section id="servicios" class="section-servicios">
         <div class="container">
-          <h2 class="titulo-servicios">Servicios</h2>
+          <h2 class="titulo-servicios">SERVICIOS</h2>
           <div class="servicios-grid">
       
             <div class="servicio-item">
@@ -106,9 +107,9 @@
             <div class="formulario-contacto">
             
                 <h2>CONTACTO</h2>
-                <form action="#" method="post">
+                <form action="enviar.php" method="POST">
                   <input type="text" name="nombre" placeholder="Nombre y Apellido" required />
-                  <input type="email" name="email" placeholder="Email" required />
+                  <input type="email" name="email" placeholder="Email"/>
                   <input type="tel" name="telefono" placeholder="Telefono" required />
                   <textarea name="consulta" rows="5" placeholder="Motivo de consulta" required></textarea>
                   <button type="submit">Enviar</button>
@@ -123,23 +124,27 @@
         
         <div class="footer-col">
           <h4>Horario de Atención</h4>
-          <p>Martes y Jueves</p>
-          <p>09:00 a 17:00 hs</p>
+          <br>
+          <p class="horario">Martes y Jueves</p>
+          <p class="horario">09:00 a 17:00 hs</p>
         </div>
     
         <div class="footer-col">
           <h4>Ubicación</h4>
-          <p>Calle Alem 1006, Comodoro Rivadavia</p>
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2778.512916202444!2d-67.4898712839464!3d-45.861046843319976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbde4545687bc192f%3A0xd09dd2535d615917!2sSan%20Mart%C3%ADn%20900%2C%20U9000AIT%20Comodoro%20Rivadavia%2C%20Chubut!5e0!3m2!1ses-419!2sar!4v1664057964168!5m2!1ses-419!2sar" 
-            width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy">
-          </iframe>
+          <br>
+          <p>Calle Alem 1006, Comodoro Rivadavia, Chubut</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44457.17728298493!2d-67.54035520558996!3d-45.859832922398255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbde454fe448614bb%3A0x91313673143a93da!2sLeandro%20N.%20Alem%201006%2C%20U9000BWV%20Comodoro%20Rivadavia%2C%20Chubut!5e0!3m2!1ses!2sar!4v1745432121280!5m2!1ses!2sar" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     
         <div class="footer-col">
           <h4>Contacto</h4>
-          <p><i class="fas fa-phone"></i> (297) 123-4567</p>
-          <p><i class="fas fa-envelope"></i> contacto@estudiozavattaro.com</p>
+          <br>
+          <p><i class="fas fa-phone"></i> (0297) 446-0935</p>
+          <p><i class="fas fa-envelope"></i> info@zavattaroyasociados.com</p>
+          <a href="https://wa.me/542974238841" target="_blank" class="wh-text">
+            <i class=" iconw fab fa-whatsapp"></i> Escribinos por WhatsApp
+          </a>
+          
         </div>
     
       </div>
